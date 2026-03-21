@@ -1,0 +1,12 @@
+venv/
+__pycache__/
+.env
+cookies.txt
+reports/
+seen_videos.json
+seen_articles.json
+analysis_result.json
+watchlist.json
+predictions.json
+*.pyc
+.vscode/
