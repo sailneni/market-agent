@@ -35,6 +35,9 @@ RSS_FEEDS = [
     {"name": "Seeking Alpha",     "url": "https://seekingalpha.com/feed.xml"},
     {"name": "Investing.com",     "url": "https://www.investing.com/rss/news.rss"},
     {"name": "Bloomberg Markets", "url": "https://feeds.bloomberg.com/markets/news.rss"},
+    {"name": "Moneycontrol Top",     "url": "https://www.moneycontrol.com/rss/latestnews.xml"},
+    {"name": "Economic Times",     "url": "https://economictimes.indiatimes.com/rssfeedstopstories.cms"},
+    {"name": "Business Standard",  "url": "https://www.business-standard.com/rss/home"},
 ]
 
 SUBREDDITS = [
