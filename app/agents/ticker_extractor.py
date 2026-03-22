@@ -1,23 +1,27 @@
-import anthropic
-import json
-from app.config import settings
+from app.utils import anthropic_client as _client, parse_llm_json
 
-client = anthropic.Anthropic(api_key=settings.ANTHROPIC_API_KEY)
 
 def extract_tickers(text: str) -> list:
-    """Use Claude to extract stock tickers from transcript."""
-    message = client.messages.create(
-        model="claude-sonnet-4-5",
-        max_tokens=1024,
-        messages=[
-            {
+    """Extract tickers using Claude Haiku (fast + cheap)."""
+    try:
+        msg = _client.messages.create(
+            model="claude-haiku-4-5-20251001",
+            max_tokens=1024,
+            messages=[{
                 "role": "user",
-                "content": f"""Extract all stock tickers, company names, and ETFs mentioned in this text.
-                Return a JSON object like: {{"tickers": [{{"ticker": "NVDA", "company": "NVIDIA", "context": "mentioned as AI play"}}]}}
-                
-                Text: {text[:10000]}"""
-            }
-        ]
-    )
-    raw = message.content[0].text
-    return json.loads(raw).get("tickers", [])
+                "content": (
+                    "Extract all stock tickers, ETFs, and commodities mentioned.\n"
+                    "Return JSON only: "
+                    "{\"tickers\": [{\"ticker\": \"NVDA\", \"company\": \"NVIDIA\", \"context\": \"mentioned as AI play\"}]}\n"
+                    "Rules:\n"
+                    "- Use GOLD for gold mentions, SILVER for silver mentions\n"
+                    "- Use real ticker symbols (NVDA not NVIDIA)\n"
+                    "- Only include clearly mentioned tickers, no guesses\n\n"
+                    f"Text: {text[:8000]}"
+                ),
+            }],
+        )
+        return parse_llm_json(msg.content[0].text).get("tickers", [])
+    except Exception as e:
+        print(f"  ⚠️  Ticker extraction failed: {e}")
+        return []

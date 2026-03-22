@@ -1,17 +1,32 @@
-fastapi
-uvicorn
-sqlalchemy
-psycopg2-binary
-celery
-redis
-youtube-transcript-api
-openai
+# AI
+anthropic
+
+# Market Data
 finnhub-python
+yfinance
+
+# News & Feeds
 requests
-pandas
+feedparser
+
+# YouTube
+youtube-transcript-api
+google-api-python-client
+yt-dlp
+
+# Dashboard
 streamlit
 plotly
+pandas
+
+# API Server
+fastapi
+uvicorn[standard]
+
+# Database (optional — falls back to JSON files if unavailable)
+sqlalchemy
+psycopg2-binary
+
+# Utilities
 python-dotenv
-apscheduler
-feedparser
-edgartools
+praw
