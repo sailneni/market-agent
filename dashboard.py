@@ -35,14 +35,14 @@ from backtester import run_backtest, get_backtest_summary
 COMMODITY_KEYWORDS = {"GOLD", "SILVER", "XAU", "XAG", "GC=F", "SI=F"}
 
 ETF_TICKERS = {
-    "XEQT", "XGRO", "XBAL", "VFV", "VOO", "SPY", "QQQ", "VTI",
+    "XEQT.TO", "XGRO", "XBAL", "VFV", "VOO", "SPY", "QQQ", "VTI",
     "VDY", "XEI", "ZDV", "CASH.TO", "PSA.TO",
     "SMH", "SOXX", "XLK", "XLF", "XLE", "XLV", "XLU",
     "CHPS", "SOXQ", "GLD", "SLV", "SIL", "SILJ", "SVR.TO", "CEF",
     "TQQQ", "SQQQ", "UPRO", "SPXU"
 }
 
-YOUR_ETFS   = ["XEQT", "VDY", "SMH", "CHPS", "SIL", "SVR.TO", "CASH.TO"]
+YOUR_ETFS   = ["XEQT.TO", "VDY", "SMH", "CHPS", "SIL", "SVR.TO", "CASH.TO"]
 MARKET_ETFS = {"SPY": "S&P 500", "QQQ": "NASDAQ 100", "VTI": "Total US Market", "VFV": "S&P 500 (CAD)"}
 SECTOR_ETFS = {
     "SMH":  "Semiconductors", "CHPS": "Chips",
@@ -299,7 +299,7 @@ if page == "🏠 Dashboard":
         for col, sym, label in [
             (pc[0], "GC=F",    "🥇 Gold"),
             (pc[1], "SI=F",    "🥈 Silver"),
-            (pc[2], "XEQT",   "📦 XEQT"),
+            (pc[2], "XEQT.TO",   "📦 XEQT.TO"),
             (pc[3], "SMH",    "📦 SMH"),
             (pc[4], "SIL",    "📦 SIL"),
             (pc[5], "SVR.TO", "📦 SVR.TO"),

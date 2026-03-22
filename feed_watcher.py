@@ -54,9 +54,18 @@ FINANCE_KEYWORDS = [
     "interest rate", "gold", "silver", "oil", "crypto", "bitcoin",
     "nasdaq", "s&p", "dow", "recession", "gdp", "cpi", "jobs",
     "ipo", "acquisition", "merger", "dividend",
-    "etf", "index fund", "xeqt", "smh", "qqq", "spy", "vdy",
+    "etf", "index fund", "xeqt.to", "smh", "qqq", "spy", "vdy",
     "semiconductor", "sector etf", "vanguard", "ishares", "invesco",
-    "chps", "sil", "silj", "svr", "cash.to", "tsx", "cgl"
+    "chps", "sil", "silj", "svr", "cash.to", "tsx", "cgl", "volatility", 
+    "futures", "options", "derivatives", "forex", "yield", "bond", "treasury", 
+    "commodity", "copper", "platinum", "palladium", "natural gas", "wheat", "corn", "soybean",
+    "supply chain", "geopolitical", "tariff", "sanction", "short", "long", "leverage", 
+    "margin", "liquidation", "arbitrage", "hedge", "alpha", "beta", "sharpe ratio", 
+    "pe ratio", "eps", "roe", "roa", "debt", "equity", "capital", "venture", "private equity",
+    "spot price", "contango", "backwardation", "basis", "open interest", "technical analysis",
+    "rsi", "macd", "bollinger", "fibonacci", "resistance", "support", "breakout", "correction",
+    "rotation", "value stock", "growth stock", "dividend yield", "buyback", "spin-off",
+    "hostile takeover", "lbo", "spac", "pipeline", "refinery", "drill", "rig count"
 ]
 
 
