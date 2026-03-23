@@ -4,7 +4,6 @@
 # One-time setup (only needed once):
 
 
-cd c:\Users\naloori\MIR\market-agent
 python -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
@@ -36,9 +35,8 @@ Then visit http://localhost:8000/docs for interactive API docs, or:
 http://localhost:8000/signals — top buy/sell signals
 http://localhost:8000/reports — recent analyses
 http://localhost:8000/tickers/NVDA — deep dive on any ticker
+
+
 Quickest start — just open the dashboard with existing data:
-
-
-cd c:\Users\naloori\MIR\market-agent
 venv\Scripts\activate
 streamlit run app/ui/dashboard.py
