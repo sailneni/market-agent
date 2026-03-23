@@ -1,7 +1,7 @@
 "# market-agent" 
 
 # How to Run
-# One-time setup (only needed once):
+One-time setup (only needed once):
 
 
 python -m venv venv
